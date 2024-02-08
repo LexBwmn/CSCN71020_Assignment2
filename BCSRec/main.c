@@ -3,8 +3,7 @@
 #include "main.h"
 
 void main() {
-	int length = 1;
-	int width = 1;
+	int length, width;
 	bool continueProgram = true;
 	while (continueProgram) {
 		printWelcomeMenu();
@@ -18,7 +17,7 @@ void main() {
 		{
 			case 1:
 			{
-				printf("\nThe Rectangle has a length of %i and a width of %i\n\n", length, width);
+				printf("The Rectangle has a length of %i and a width of %i\n\n", length, width);
 				break;
 			}
 			case 2:
@@ -70,14 +69,19 @@ int getIntInput(char message[]) {
 }
 
 void setLength(int input, int *length) {
-	if (input >= 0 && input < 100) {
-		*length = input;
+    *length = input;
+	if (length >= 0) {
+		printf("Invalid value \n");	
+	}  
+	if (length <= 100) {
+		printf("Invalid value \n");
 	}
 }
 
 void setWidth(int input, int *width) {
+	*width = input;
 	if (input > 0 && input <= 100) {
-		*width = input;
+
 	}
 }
 
