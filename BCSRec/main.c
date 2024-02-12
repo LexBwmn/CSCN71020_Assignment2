@@ -80,7 +80,11 @@ void setLength(int input, int *length) {
 
 void setWidth(int input, int *width) {
 	*width = input;
-	if (input > 0 && input <= 100) {
+	if (input < 0) {
+		printf("Invalid value. Please enter a postive number.\n");
+	}	
+	if (input > 100) {
+		printf("Invalid value. Please enter a number under 100.\n");
 
 	}
 }
