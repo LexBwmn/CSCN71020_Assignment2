@@ -70,12 +70,12 @@ int getIntInput(char message[]) {
 
 void setLength(int input, int *length) {
     *length = input;
-	if (length >= 0) {
-		printf("Invalid value \n");	
-	}  
-	if (length <= 100) {
-		printf("Invalid value \n");
-	}
+	if (input < 0) {
+		printf("Invalid value. Please enter a postive number.\n");	
+	} 
+	if (input > 100){
+		printf("Invalid value. Please enter a number under 100.\n");
+	} 
 }
 
 void setWidth(int input, int *width) {

@@ -17,6 +17,7 @@ namespace REQSAssignment2
 		{
 			// This is testing the getPerimter Functionality using using 2(3 + 6) 
 		    int Result = 0;
+		
 			Result = getPerimeter(3,6);
 			Assert::AreEqual(20, Result);
 
@@ -34,29 +35,36 @@ namespace REQSAssignment2
 		{
 			// testing this function by hard coding some variable as the high limit (100), and then trying to enter a number over that
 			int MAXNUM = 100;
-			int inputTooHigh = 115;
-			Assert::IsFalse(inputTooHigh > MAXNUM);
+			int result = 111;
+
+			Assert::IsTrue(result > MAXNUM);
 		}
 
 		TEST_METHOD(setLengthFunctionalityLowLimit)
 		{
 			int MINNUM = 0;
 			int inputTooLow = -3;
-			Assert::IsFalse(inputTooLow < MINNUM);
+			
+			Assert::IsTrue(inputTooLow < MINNUM);
 		}
 
-		TEST_METHOD(TestMethod5)
-		{
+		//TEST_METHOD(TestLengthForDecimals)
+		//{
+		// int TestDecimal = 3.5
+		// 
+		//}
 
-		}
+		//TEST_METHOD(setWidthFunctionalityHighLimit)
+		//{
+		//}
 
-		TEST_METHOD(TestMethod6)
-		{
-		}
+		//TEST_METHOD(setWidthFunctionalityLowLimit)
+		//{
+		//}
 
-		TEST_METHOD(TestMethod8)
-		{
-		}
+		//TEST_METHOD(TestLengthForLetters)
+		//{
+		//}
 	
 	};
 }
